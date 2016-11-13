@@ -1,9 +1,46 @@
+<!DOCTYPE html>
+
 <html>
-    <body>
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="OK">
-    </form>
-    </body>
+
+<head>
+    <title>Spotify Top Album Collage Generator</title>
+</head>
+
+<body>
+    <div class="container">
+
+
+
+        <h2>Generate a 4x4 collage of your top albums on Spotify!</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input class="btn btn-primary" type="submit" value="Login to Spotify">
+        </form>
+
+    </div>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    {% load static %}
+    <style>
+        body {
+            background-image: url({% static "img/download.png" %})
+        }
+
+        .container {
+             background-color: white;
+             padding: 40px;
+             text-align: center;
+        }
+
+
+    </style>
+</body>
+
 </html>
