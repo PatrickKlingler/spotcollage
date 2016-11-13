@@ -23,5 +23,5 @@ def result(request):
             token = form.cleaned_data['code']
             contents = create_collage(token)
 
-        return render(request, 'generator/result.html', {'contents': contents })
+        return render(request, 'generator/result.html', {'contents': contents})
     pass
